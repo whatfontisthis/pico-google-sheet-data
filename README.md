@@ -41,10 +41,19 @@
 3. 첫 번째 시트(탭)의 이름을 확인 (예: `Sheet1`).
 
 
+### 2. Google Sheets 및 Apps Script 설정
+#### 단계 1: Google Sheets 생성
+1. 새로운 Google Sheets 생성 (예: `Pico Data`).
+2. URL에서 **Spreadsheet ID**를 복사:
+  - https://docs.google.com/spreadsheets/d/<스프레드시트-ID>/edit
+
+3. 첫 번째 시트(탭)의 이름을 확인 (예: `Sheet1`).
+
+
 #### 단계 2: Google Apps Script Webhook 생성
 1. Google Sheets에서 **확장 프로그램 > Apps Script**로 이동.
 2. 기본 코드를 다음 코드로 교체:
-'''
+---
 javascript
 function doPost(e) {
   var sheet = SpreadsheetApp.openById('<스프레드시트-ID>').getSheetByName('Sheet1');
@@ -54,23 +63,27 @@ function doPost(e) {
     JSON.stringify({ status: 'success' })
   ).setMimeType(ContentService.MimeType.JSON);
 }
-'''
+---
+- <스프레드시트-ID>를 실제 Spreadsheet ID로 교체.
+- 스크립트를 저장하고 Web App으로 배포:
+  1.  배포 > 새 배포 클릭.
+  2. Web App 선택.
+  3. 실행 권한: 나.
+  4. 접근 권한: 모든 사용자.
+  5. 배포 후 Web App URL 복사.
 
-수정할 부분:
-<스프레드시트-ID>를 실제 Spreadsheet ID로 교체.
-스크립트를 저장하고 Web App으로 배포:
-배포 > 새 배포 클릭.
-Web App 선택.
-실행 권한: 나.
-접근 권한: 모든 사용자.
-배포 후 Web App URL 복사.
-단계 3: 시트 공유
-Web App 서비스 계정 이메일과 Google Sheet 공유 (필요시):
-파일 > 공유로 이동.
-이메일 추가 후 편집자 권한 부여.
+#### 단계 3: 시트 공유
+1.웹 앱 서비스 계정 이메일과 Google Sheet 공유 (필요시):
+2.파일 > 공유로 이동.
+3.이메일 추가 후 편집자 권한 부여.
 
-3. 코드 구성
-Python 스크립트를 열고 다음 값을 수정:
+
+### 3. 라즈베리파이 피코 실행 코드 dht-google-sheet.py  
+1.Python 스크립트를 열고 다음 값을 수정:
+2.WIFI_SSID: 와이파이 이름(2.4G 사용).
+3.WIFI_PASSWORD: 비밀번호.
+4.WEBHOOK_URL: Google Apps Script Web App URL.
+5.스크립트를 저장하고 Pico W에 업로드/실행.
 WIFI_SSID: Wi-Fi SSID.
 WIFI_PASSWORD: Wi-Fi 비밀번호.
 WEBHOOK_URL: Google Apps Script Web App URL.
