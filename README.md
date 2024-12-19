@@ -41,15 +41,6 @@
 3. 첫 번째 시트(탭)의 이름을 확인 (예: `Sheet1`).
 
 
-### 2. Google Sheets 및 Apps Script 설정
-#### 단계 1: Google Sheets 생성
-1. 새로운 Google Sheets 생성 (예: `Pico Data`).
-2. URL에서 **Spreadsheet ID**를 복사:
-  - https://docs.google.com/spreadsheets/d/<스프레드시트-ID>/edit
-
-3. 첫 번째 시트(탭)의 이름을 확인 (예: `Sheet1`).
-
-
 #### 단계 2: Google Apps Script Webhook 생성
 1. Google Sheets에서 **확장 프로그램 > Apps Script**로 이동.
 2. 기본 코드를 다음 코드로 교체:
