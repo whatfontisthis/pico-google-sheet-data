@@ -65,18 +65,18 @@ function doPost(e) {
     5. 배포 후 Web App URL 복사.
 
 #### 단계 3: 시트 공유
-1.웹 앱 서비스 계정 이메일과 Google Sheet 공유 (필요시):
-2.파일 > 공유로 이동.
-3.이메일 추가 후 편집자 권한 부여.
+1. 웹 앱 서비스 계정 이메일과 Google Sheet 공유 (필요시):
+2. 파일 > 공유로 이동.
+3. 이메일 추가 후 편집자 권한 부여.
 
 
 ### 3. 라즈베리파이 피코 실행 코드 dht-google-sheet.py  
-1.Python 스크립트를 열고 다음 값을 수정:
-2.WIFI_SSID: 와이파이 이름(2.4G 사용).
-3.WIFI_PASSWORD: 비밀번호.
-4.WEBHOOK_URL: Google Apps Script Web App URL.
-5.스크립트를 저장하고 Pico W에 업로드/실행.
-WIFI_SSID: Wi-Fi SSID.
-WIFI_PASSWORD: Wi-Fi 비밀번호.
-WEBHOOK_URL: Google Apps Script Web App URL.
-스크립트를 저장하고 Pico W에 업로드.
+1. Python 스크립트를 열고 다음 값을 수정:
+2. WIFI_SSID: 와이파이 이름(2.4G 사용).
+3. WIFI_PASSWORD: 비밀번호.
+4. WEBHOOK_URL: Google Apps Script Web App URL.
+5. 스크립트를 저장하고 Pico W에 업로드/실행.
+  - WIFI_SSID: Wi-Fi SSID.
+  - WIFI_PASSWORD: Wi-Fi 비밀번호.
+  - WEBHOOK_URL: Google Apps Script Web App URL.
+6. 스크립트를 저장하고 Pico W에 업로드.
