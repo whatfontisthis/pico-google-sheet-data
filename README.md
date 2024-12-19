@@ -53,7 +53,7 @@
 #### 단계 2: Google Apps Script Webhook 생성
 1. Google Sheets에서 **확장 프로그램 > Apps Script**로 이동.
 2. 기본 코드를 다음 코드로 교체:
----
+
 ```javascript
 function doPost(e) {
     var sheet = SpreadsheetApp.openById('<스프레드시트-ID>').getSheetByName('Sheet1');
@@ -64,7 +64,7 @@ function doPost(e) {
         JSON.stringify({ status: 'success' })
     ).setMimeType(ContentService.MimeType.JSON);
 }
----
+```
 - <스프레드시트-ID>를 실제 Spreadsheet ID로 교체.
 - 스크립트를 저장하고 Web App으로 배포:
   1.  배포 > 새 배포 클릭.
