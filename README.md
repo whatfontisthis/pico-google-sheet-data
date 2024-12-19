@@ -18,9 +18,9 @@
 ---
 
 ## 사전 준비
-1. **Raspberry Pi Pico W** (MicroPython 설치 필요).
+1. **Raspberry Pi Pico W** (Micropython 설치, 예:Thonny).
 2. **DHT11 센서** (Pico W와 연결).
-3. **Google Cloud Platform (GCP) 프로젝트** (Google Sheets 및 Apps Script 활성화).
+3. **지메일 계정 Google Sheets 및 Apps Script**
 
 ---
 
