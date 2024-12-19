@@ -65,13 +65,13 @@ function doPost(e) {
     ).setMimeType(ContentService.MimeType.JSON);
 }
 ```
-- <스프레드시트-ID>를 실제 Spreadsheet ID로 교체.
-- 스크립트를 저장하고 Web App으로 배포:
-  1.  배포 > 새 배포 클릭.
-  2. Web App 선택.
-  3. 실행 권한: 나.
-  4. 접근 권한: 모든 사용자.
-  5. 배포 후 Web App URL 복사.
+  - <스프레드시트-ID>를 실제 Spreadsheet ID로 교체.
+  - 스크립트를 저장하고 Web App으로 배포:
+    1.  배포 > 새 배포 클릭.
+    2. Web App 선택.
+    3. 실행 권한: 나.
+    4. 접근 권한: 모든 사용자.
+    5. 배포 후 Web App URL 복사.
 
 #### 단계 3: 시트 공유
 1.웹 앱 서비스 계정 이메일과 Google Sheet 공유 (필요시):
